@@ -1,0 +1,235 @@
+
+body{
+  background: #f4f9ff;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+main{
+  display: flex;
+    align-items: center;
+  width: 100%;
+    position: relative;
+   justify-content: space-around; 
+     text-transform: uppercase;
+
+}
+
+
+main h1{
+   
+  font-size: 18px;
+  position: relative;
+  left: 0px;
+  text-align: center;
+  font-weight: 900;
+}
+
+main h3{
+font-size: 14px;
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  line-height: 1.5;
+}
+ol {
+  list-style-type: circle;
+}
+li::marker {
+  background-color: rgb(235, 164, 0);
+  color: rgb(235, 164, 0);
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 2px;
+  border-color: rgb(235, 164, 0);
+  border-width: 20px;
+  height: 100px;
+}
+ol li{
+font-size: 17px;
+
+}
+
+main .describe{
+  position: relative;
+  width: 450px;
+  top: 15vh;
+  /* text-align: center; */
+}
+
+main  .describe a {
+  padding: 15px;
+  display: block;
+  width: 180px;
+  background: rgb(235, 164, 0);
+  border-radius: 40px;
+ 
+  text-decoration: none;
+  color:#fff;
+  
+  text-align: center;
+}
+
+.message{
+    position: relative;
+    background-color:#fff;
+    height: 70vh;
+    top: 15vh;
+    width:400px;
+    float: right;
+    border-radius: 20px;
+    box-shadow: 0 9px 68px 0 rgb(62 57 107 / 20%);
+    border: 3px solid #f4f9ff;
+    border-bottom-right-radius: 75px;
+}
+
+.message img{
+    position: absolute;
+    border-radius: 50%;
+    margin: auto;
+    width: 100px;
+    bottom: 60vh;
+    
+}
+.messageimg{
+    margin: auto;
+    text-align: center;
+    padding-right: 100px;
+}
+hr{
+    position: relative;
+   background-color: rgb(235, 164, 0);
+   top: 10vh;
+   height: 1.2px;
+}
+
+.call img{
+    position: absolute;
+    border-radius: 50%;
+    margin: auto;
+    width: 40px;
+    bottom: 60vh;
+    left: 80%;
+}
+
+.sendcontainer{
+    position: relative;
+    top: 88%;
+    margin: auto;
+    display: flex;
+   justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.message input{
+  width: 100%;
+  border: 1px solid rgb(39, 39, 39);
+  border-radius: 50px;
+  padding: 9px;
+}
+
+.send{
+    
+    color: rgb(235, 164, 0);
+    position: relative;
+    right: 60px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main .mainmessages{
+overflow-y: scroll;
+overflow-x: hidden;
+
+scroll-behavior: smooth;
+background-color: #fff;
+width: 100%;
+height: 70%;
+position: absolute;
+top: 18%;
+}
+
+
+/* .reciever{
+    background-color: #fff;
+    margin: 8px;
+    
+    width: 65%;
+    box-shadow: 0 9px 68px 0 rgb(62 57 107 / 20%);
+    float: left;
+   
+   padding: 6px 10px 7px;
+   
+    border-radius: 0px 2px 0px 50px;
+} */
+
+.mainmessages::before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -40px;
+	right: auto;
+  top: 30px;
+	bottom: auto;
+	border: 20px solid;
+	border-color: #666 #666 transparent transparent;
+}
+.mainmessages:after{
+	content: ' ';
+	position: absolute;
+	/* width: 0; */
+	height: 0;
+  left: -20px;
+	right: auto;
+  top: 38px;
+	bottom: auto;
+	border: 12px solid;
+	border-color: lightyellow lightyellow transparent transparent;
+}
+
+
+
+.sender{
+    background-color: #eaf1fa;
+    margin: 8px;
+    padding: 12px;
+    box-shadow: 0 9px 68px 0 rgb(62 57 107 / 20%);
+    width: 65%;
+    float: right;
+    padding: 15px;
+   border-top-right-radius: 50px;
+   border-bottom-right-radius: 85px;
+}
+
+header{
+  display: none;
+}
+
+
+
+@media (max-width:1000px) {
+  .describe{
+    display: none;
+  }
+
+  .message{
+    position: relative;
+    background-color:#fff;
+    height: 70vh;
+    top: 15vh;
+    width:90%;
+    float: right;
+    border-radius: 20px;
+    box-shadow: 0 9px 68px 0 rgb(62 57 107 / 20%);
+    border: 3px solid #f4f9ff;
+    border-bottom-right-radius: 75px;
+}
+
+header{
+  display: block;
+}
+
+}

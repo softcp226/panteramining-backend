@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+body{
+    padding: 0%;
+    margin: 0%;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgb(22, 19, 19);
+    text-align: left;
+    background-color: #fff;
+    scroll-behavior: smooth;
+    width: 100%;
+    /* overflow-x: hidden; */
+}
+
+@keyframes changeOpacity{
+from{
+    opacity: 0.5;
+}
+to{
+    opacity: 1;
+}
+}
+
+@keyframes animateheaderImage{
+0%{
+    background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url("./images/images\ \(7\).jpeg");
+    background-image: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url("./images/images\ \(7\).jpeg");
+    width: 100%;
+    /* background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url(https://i.ibb.co/GnGTvfj/bg.jpg);
+    background-image: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url(https://i.ibb.co/GnGTvfj/bg.jpg); */
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    background-attachment: initial, initial;
+    background-origin: initial, initial;
+    background-clip: initial, initial;
+    background-color: initial;
+    background-size: cover;
+    background-position: center;
+    /* padding: 5vh 0; */
+    color: #fff;
+    position: relative;
+    height: 100vh;
+}
+30%{
+    background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url("./images/images\ \(7\).jpeg");
+    background-image: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url("./images/images\ \(7\).jpeg");
+
+
+    width: 100%;
+    /* background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url(https://i.ibb.co/GnGTvfj/bg.jpg);
+    background-image: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url(https://i.ibb.co/GnGTvfj/bg.jpg); */
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    background-attachment: initial, initial;
+    background-origin: initial, initial;
+    background-clip: initial, initial;
+    background-color: initial;
+    background-size: cover;
+    background-position: center;
+    /* padding: 5vh 0; */
+    color: #fff;
+    position: relative;
+    height: 100vh;
+   
+}
+75%{
+    background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url("./images/images\ \(5\).jpeg");
+    background-image: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url("./images/images\ \(5\).jpeg");
+
+
+    width: 100%;
+    /* background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url(https://i.ibb.co/GnGTvfj/bg.jpg);
+    background-image: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url(https://i.ibb.co/GnGTvfj/bg.jpg); */
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    background-attachment: initial, initial;
+    background-origin: initial, initial;
+    background-clip: initial, initial;
+    background-color: initial;
+    background-size: cover;
+    background-position: center;
+    /* padding: 5vh 0; */
+    color: #fff;
+    position: relative;
+    height: 100vh;
+}
+
+100%{
+    background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url("./images/images\ \(4\).jpeg");
+    background-image: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url("./images/images\ \(4\).jpeg");
+
+
+    width: 100%;
+    /* background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url(https://i.ibb.co/GnGTvfj/bg.jpg);
+    background-image: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url(https://i.ibb.co/GnGTvfj/bg.jpg); */
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    background-attachment: initial, initial;
+    background-origin: initial, initial;
+    background-clip: initial, initial;
+    background-color: initial;
+    background-size: cover;
+    background-position: center;
+    /* padding: 5vh 0; */
+    color: #fff;
+    position: relative;
+    height: 100vh;
+}
+
+}
+
+
+header{
+
+    animation:animateheaderImage;
+     animation-duration: 5s;
+     animation-iteration-count: infinite;
+animation-fill-mode: forwards;
+
+animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+    width: 100%;
+    /* background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url(https://i.ibb.co/GnGTvfj/bg.jpg);
+    background-image: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url(https://i.ibb.co/GnGTvfj/bg.jpg); */
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    background-attachment: initial, initial;
+    background-origin: initial, initial;
+    background-clip: initial, initial;
+    background-color: initial;
+    background-size: cover;
+    background-position: center;
+    /* padding: 5vh 0; */
+    color: #fff;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header-content{
+position: relative;
+top: 5vh;
+}
+.aim{
+    font-size: 1.5rem;
+    color:#3155e7; 
+    padding-left: 40px;
+    font-size: 18px;
+    position: relative;
+    font-weight: 500;
+  
+    /* #3043c0, #5f49cc, #8450d7, #a656e1, #c75cea */
+}
+
+.aim ::before{
+    content: '';
+    background:#3155e7;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color:#3155e7;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 30px;
+    height: 2px;
+
+}
+
+.content-container{
+    position: relative;
+    top: 4vh;
+}
+.tittle{
+    font-size: 38px;
+    padding-left: 20px;
+    line-height: 1.1em;
+    font-weight: bold;
+    /* text-transform: capitalize; */
+   font-family: Arial, Helvetica, sans-serif;
+   
+}
+.hint{
+    position: relative;
+    top: 4vh;
+    padding-left: 15px;
+ font-size: 18px;
+    /* font-weight: 200; */
+ /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+font-weight: 300;
+}
+.buttons{
+    position: relative;
+    top: 8vh;
+    display: flex;
+}
+
+.buttons a{
+    padding: 6px 12px;
+    display: block;
+    width:45%;
+    background: #3155e7;
+    border-radius: 40px;
+    margin: 20px 0px;
+    text-decoration: none;
+    color:#fff;
+    text-align: center;
+    margin: auto;
+}
+.buttons >.register{
+    background-color: #fff;
+    color: black;
+}
+.buttons a:hover{
+    padding: 6px 10px;
+    display: block;
+    /* width: 100px; */
+    background: #fff;
+    border-radius: 40px;
+    margin: 20px 0px;
+    text-decoration: none;
+    color: rgb(20, 19, 19);
+    text-align: center;
+    margin: auto;
+}
+.buttons >.register:hover{
+    padding: 6px 10px;
+    display: block;
+   
+    background: #3155e7;
+    border-radius: 40px;
+    margin: 20px 0px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+}
+
+header .animatedgif{
+display: none;
+}
+
+
+.hint >p{
+    display: none;
+}
+/* header-content */
+
+@media(min-width:350px){
+   
+    .hint >p{
+        display:block;
+    }
+    .header-content{
+        position: relative;
+        top: 14vh;
+        width: 95%;
+        }
+        .tittle{
+       
+            font-size: 48px;
+            padding-left: 20px;
+            line-height: 1em;
+            font-weight: 700;
+
+        }
+
+       .hint{
+            position: relative;
+            top: 5vh;
+    /* font-size: 25px;
+    font-weight: 400; */
+  
+        }
+        .buttons{
+            position: relative;
+            top: 12vh;
+            display: flex;
+            width: 80%;
+            justify-content: space-between;
+        }
+  .buttons a{
+    padding: 12px 15px;
+  }
+}
+
+
+
+@media(min-width:600px){
+    
+    
+    .header-content{
+        position: relative;
+        top: 16vh;
+        width: 550px
+        }
+        .tittle{
+       
+            font-size: 48px;
+            padding-left: 20px;
+            line-height: 1em;
+            font-weight: bold;
+        }
+
+        .hint{
+            font-size: 1.4em;
+            position: relative;
+            top: 9vh;
+            /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+            
+            font-weight: 200;
+        }
+        .buttons{
+            position: relative;
+            top: 18.1vh;
+            display: flex;
+            width: 85%;
+        }
+
+      
+        .buttons a{
+            padding: 7px 10px;
+    display: block;
+    width: 150px;
+    background: #3155e7;
+    border-radius: 40px;
+    margin: 20px 0px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+        }
+
+        .buttons a:hover{
+            padding: 6px 10px;
+            display: block;
+            width: 150px;
+            background: #fff;
+            border-radius: 40px;
+            margin: 20px 0px;
+            text-decoration: none;
+            color: rgb(20, 19, 19);
+            text-align: center;
+            margin: auto;
+        }
+        .buttons >.register:hover{
+            padding: 6px 10px;
+            display: block;
+            width: 150px;
+            background: #3155e7;
+            border-radius: 40px;
+            margin: 20px 0px;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            margin: auto;
+        }
+        
+  
+}
+
+@media(min-width:800px){
+    header .animatedgif{
+        display: none;
+        /* position: absolute;
+        bottom: 17%;
+        left: 55%;
+        width: 350px;
+        height: auto; */
+    }
+
+    .tittle{
+        font-size: 52px;
+    }
+    .header-content{
+        width: 65%;
+        position: relative;
+        top: 17vh;
+        }
+
+        .hint{
+            font-size: 1.5em;
+            position: relative;
+            top: 5vh;
+            /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+            font-weight: 200;
+        }
+
+        .buttons{
+            position: relative;
+            top: 10.1vh;
+            display: flex;
+            width: 85%;
+        }
+       
+        .buttons a{
+            padding: 9px 13px;
+    display: block;
+    width: 200px;
+    background: #3155e7;
+    border-radius: 40px;
+    margin: 20px 0px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+        }
+
+        .buttons a:hover{
+            padding: 9px 13px;
+            display: block;
+            width: 200px;
+            background: #fff;
+            border-radius: 40px;
+            margin: 20px 0px;
+            text-decoration: none;
+            color: rgb(20, 19, 19);
+            text-align: center;
+            margin: auto;
+        }
+        .buttons >.register:hover{
+            padding: 9px 13px;
+            display: block;
+            width: 200px;
+            background: #3155e7;
+            border-radius: 40px;
+            margin: 20px 0px;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            margin: auto;
+        }
+
+}
+
+
+@media (min-width:900px) {
+    
+    header .animatedgif{
+        display: none;
+        /* position: absolute;
+        bottom: 17%;
+        left: 55%;
+        width: 350px;
+        height: auto; */
+    }
+
+    .tittle{
+        font-size: 60px;
+    }
+    .header-content{
+        width: 700px;
+        position: relative;
+        top: 17vh;
+        }
+
+        .hint{
+            font-size: 1.6em;
+            position: relative;
+            top: 5vh;
+            /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+            font-weight: 200;
+        }
+
+        .buttons{
+            position: relative;
+            top: 10.1vh;
+            display: flex;
+            width: 85%;
+        }
+       
+        .buttons a{
+            padding: 9px 13px;
+    display: block;
+    width: 210px;
+    background: #3155e7;
+    border-radius: 40px;
+    margin: 20px 0px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+        }
+
+        .buttons a:hover{
+            padding: 9px 13px;
+            display: block;
+            width: 210px;
+            background: #fff;
+            border-radius: 40px;
+            margin: 20px 0px;
+            text-decoration: none;
+            color: rgb(20, 19, 19);
+            text-align: center;
+            margin: auto;
+        }
+        .buttons >.register:hover{
+            padding: 9px 13px;
+            display: block;
+            width: 210px;
+            background: #3155e7;
+            border-radius: 40px;
+            margin: 20px 0px;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            margin: auto;
+        }
+
+
+}
+
+
+
+
+
+@media(min-width:1100px){
+    .header-content{
+        width: 700px;
+        position: relative;
+        top: 13vh;
+        }
+
+        .hint{
+            font-size: 1.5em;
+            position: relative;
+            top: 5vh;
+          padding-left: 25px;
+          /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;           */
+          font-weight: 390;
+          width: 640px;
+        }
+        .tittle{
+            font-size: 79px;
+            padding-left: 25px;
+            line-height: 1em;
+            font-weight: bold;
+          position: relative;
+          top: 3vh;
+        }
+
+        header .animatedgif{
+            display: block;
+            position: absolute;
+            bottom: 5%;
+            left: 57%;
+            width: 42%;
+            height: 85vh;
+            /* height: auto; */
+        }
+
+        .buttons{
+            /* position: relative; */
+            top: 9.9vh;
+            display: flex;
+            width: 85%;
+        }
+        .buttons a{
+            padding: 13px 16px;
+    display: block;
+    width: 230px;
+    background: #3155e7;
+    border-radius: 40px;
+    margin: 20px 0px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+        }
+
+        .buttons a:hover{
+            padding: 13px 16px;
+            display: block;
+            width: 230px;
+            background: #fff;
+            border-radius: 40px;
+            margin: 20px 0px;
+            text-decoration: none;
+            color: rgb(20, 19, 19);
+            text-align: center;
+            margin: auto;
+        }
+        .buttons >.register:hover{
+            padding: 13px 16px;
+            display: block;
+            width: 230px;
+            background:#3155e7;
+            border-radius: 40px;
+            margin: 20px 0px;
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+            margin: auto;
+        }
+}
+
+
+

@@ -1,0 +1,26 @@
+.talk-bubble {
+    margin: 20px;
+    display: inline-block;
+    position: relative;
+    width:65%;
+    height: auto;
+    background-color: rgb(233, 231, 231);
+    padding: 12px;
+    box-shadow: 0 9px 68px 0 rgb(62 57 107 / 20%);
+    float: left;
+}
+.tri-right.left-top::before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -20px;
+    right: auto;
+    top: 0px;
+    bottom: auto;
+    border: 22px solid;
+    border-color:  rgb(233, 231, 231) transparent transparent transparent;
+}
+
+
+

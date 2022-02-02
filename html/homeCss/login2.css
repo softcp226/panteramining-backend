@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+
+
+body{
+    background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url("./images/images\ \(5\).jpeg");
+    background-image: linear-gradient(rgba(1, 1, 1, 0.8), rgba(1, 1, 1, 0.8)), url("./images/images\ \(5\).jpeg");
+
+
+    width: 100%;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: contain;
+    background-attachment: initial, initial;
+    background-origin: initial, initial;
+    background-clip: initial, initial;
+    background-color: initial;
+    background-size: cover;
+    background-position: center;
+    /* padding: 5vh 0; */
+    /* color: #fff; */
+    position: relative;
+    height:100vh ;
+}
+
+
+main{
+    background-color: #fff;
+    margin: auto;
+    height: 85vh;
+    width: 60%;
+    position: relative;
+    top:8vh ;
+    border-radius: 10px;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+
+.aim{
+    font-size: 1.5rem;
+    color:rgb(235, 164, 0); 
+    padding-left: 40px;
+    font-size: 18px;
+    position: relative;
+    font-weight: 500;
+  
+    /* #3043c0, #5f49cc, #8450d7, #a656e1, #c75cea */
+}
+
+.aim ::before{
+    content: '';
+    background: rgb(235, 164, 0);
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(235, 164, 0);
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 30px;
+    height: 2px;
+
+}
+
+hr{
+    background-color: rgb(235, 164, 0);
+    position: relative;
+    top: 3%;
+}
+.inputcontainer{
+    position: relative;
+    top: 4%; 
+    
+}
+img{
+    border-radius: 50%;
+    width: 120px;
+}
+
+.inputcontainer >div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+padding: 2px;
+
+}
+.inputcontainer >div div{
+    
+    /* position: absolute; */
+    /* left: 200px; */
+    margin: 14px;
+}
+
+.nametag{
+    position: relative;
+    font-size: 20px;
+}
+button{
+    padding: 14px 17px;
+    display: block;
+    width: 150px;
+    background: rgb(235, 164, 0);
+    border-radius: 40px;
+    margin: 20px 0px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+   border: 1px solid rgb(235, 164, 0);
+   position: relative;
+   right: 50px;
+}
+
+button:hover{
+    padding: 14px 17px;
+    display: block;
+    width: 150px;
+    background: rgb(243, 173, 9);
+    border-radius: 40px;
+    margin: 20px 0px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin: auto;
+   border: 1px solid rgb(235, 164, 0);
+   cursor: pointer;
+}
+
+
+input,select{
+padding: 15px;
+border: 1px solid rgb(36, 35, 35);
+width: 320px;
+border-radius: 10px;
+position: relative;
+/* left: 10%; */
+
+}
+
+a{
+    text-decoration: none;
+    color: rgb(243, 173, 9);
+    padding: 9px;
+}
+
+.or{
+    /* position: relative;
+    left: 5px; */
+}
+
+.reg{
+    position: relative;
+    right: 50px;
+    font-size: 23px;
+}
+
+.errmessage{
+    color: red;
+    position: relative;
+    top: 14px;
+    
+}
+
+@media (max-width:800px) {
+    main{
+        background-color:transparent;
+        margin: auto;
+        height: 85vh;
+        width: 100%;
+        position: relative;
+        top:8vh ;
+        border-radius: 10px;
+        text-align: center;
+        color: #fff;
+        /* overflow-y: scroll; */
+    }
+    
+    input,select{
+        width: 87%;
+        background-color: transparent;
+        border: 1px solid #fff;
+color: #fff;
+left: 0%;
+    }
+    
+    .nametag{
+        display: none;
+    }
+
+
+    .aim ::before{
+        
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        left: 10%;
+    
+    }
+    select{
+        background-color: transparent;
+    }
+    option{
+        background-color:transparent;
+        color: #000;
+    }
+
+    button{
+        padding: 10px 14px;
+        display: block;
+        width: 150px;
+        background: rgb(235, 164, 0);
+        border-radius: 40px;
+        margin: 20px 0px;
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        margin: auto;
+       border: 1px solid rgb(235, 164, 0);
+       position: relative;
+       right: 0px;
+    }
+
+    .reg{
+        position: relative;
+        right: 0px;
+        font-size: 19px;
+    }
+
+}
+
+
+
+/* 
+@media (min-width:479px){
+    input,select{
+        width: 70%;
+        background-color: transparent;
+        border: 1px solid #fff;
+color: #fff;
+left: 0%;
+    }
+} */

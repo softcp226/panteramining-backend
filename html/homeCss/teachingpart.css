@@ -1,0 +1,116 @@
+
+
+.teachingpart{
+    position: relative;
+   background-color: #fff;
+   top: 60px;
+   
+}
+.teachingpartcontainer{
+    position: inherit;
+    top: 50px;
+    
+}
+.teachingpartcontainer >p{
+    color: rgb(235, 164, 0);
+    text-align: center;
+}
+
+.teachingpartcontainer >h1{
+    color: rgb(29, 28, 28);
+    text-align: center;
+    font-weight: 600;
+    font-size: 29px;
+    font-family: sans-serif;
+display: block;
+
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-weight: bolder;
+font-size: 30px;
+width: 100%;
+}
+
+.teachingclassify{
+  width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.stepbystep{
+    width: 35%;
+}
+
+
+
+
+
+
+
+    @media (max-width:700px) {
+        .teachingpartcontainer >h1,.stepbystep h2{
+display: none;
+        }
+      
+.video-wrapper{
+    text-align: center;
+    margin: auto;
+    /* padding-top: 30px; */
+    }
+    video{
+        width: 100%;
+        height: auto;
+        margin: 60px;
+        margin: auto;
+    }
+
+
+        .stepbystep{
+            width: 100%;
+        }
+        .stepbystep p{
+            font-size: 17.5px;
+            position: relative;
+            top: 10px;
+        }
+    
+        .teachingpartcontainer img{
+            width: 100%;
+        }
+    }
+
+
+
+    
+    @media (min-width:700px) {
+       .stepbystep h2{
+display: none;
+        }
+      
+.video-wrapper{
+    text-align: center;
+    margin: auto;
+    /* paddinpx; */
+    }
+    video{
+        width: 100%;
+        height: auto;
+        margin: 60px;
+        margin: auto;
+    }
+    .stepbystep p{
+        position: relative;
+        top: 14px;
+    }
+    .teachingpartcontainer img{
+        width: 100%;
+    }
+
+        /* .stepbystep{
+            width: 100%;
+        }
+    
+        .teachingpartcontainer img{
+            width: 100%;
+        } */
+    }

@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+  }
+
+main{
+
+    top: 2vh;
+   
+    width: 850px;
+    background-color:#f4f9ff;
+    margin: auto;
+    box-shadow: 0 9px 68px 0 rgb(62 57 107 / 20%);
+text-align: center;
+border: 2px solid #f4f9ff;
+/* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+
+
+.usersettings{
+    background-color: #fff;
+    background-color: #142c8e;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+ .usersettings >.user img{
+ width: 150px;
+ border-radius: 50%;
+ margin: 10px;
+ }
+ 
+ .usersettings .user{
+     /* background-color: #142c8e;
+     display: flex;
+     justify-content: center;
+     align-items: center; */
+     padding: 20px;
+     color: #fff;
+     font-size: 20px;
+     width: 400px;
+     margin: auto;
+     text-align: center;
+ }
+ .name{
+     font-size: 28px;
+     width: 100%;
+    
+ }
+ 
+ .usersettings .about{
+     display: flex;
+     justify-content: space-around;
+ }
+ 
+ .about .large{
+     font-weight: 600;
+     font-size: 22px;
+    
+ }
+ 
+ 
+ .usersettings>.about p{
+  position: relative;
+  bottom: 12px;
+  font-size: 14px;
+  
+ }
+ 
+ .inputs{
+     position: relative;
+     /* top: 70px; */
+ } 
+ .inputs >div{
+     margin: 17px;
+     padding: 17px;
+ }
+ input,select{
+    padding: 8px;
+    border: 1px solid rgb(36, 35, 35);
+    width: 300px;
+    border-radius: 10px;
+    position: relative;
+    left: 70px;
+    font-size: 18px;
+    background-color: #fff;
+    /* left: 10%; */
+
+ }
+ label{
+     font-size: 19px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     position: absolute;
+     left: 70px;
+     font-weight: 600;
+ }
+
+ button{
+    padding: 10px 20Px;
+    display: block;
+    width:200px;
+    background: #142c8e;
+    border-radius: 40px;
+    margin: 20px 0px;
+    text-decoration: none;
+    color:#fff;
+    text-align: center;
+    margin: auto;
+    border: 1px solid #142c8e;
+    position: relative;
+           bottom: 15px;position: relative;
+           bottom: 15px;
+ }
+ button:hover{
+     cursor: pointer;
+     background-color: #2f47a8;
+ }
+
+div h1{
+    font-size: 20px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+text-shadow:1px 1px  #2f47a8;
+width: 90%;
+}
+
+#card-type-image{
+width: 200px;
+}
+ @media (max-width:850px) {
+    #card-type-image{
+        width:35%;
+        }
+    main{
+
+        top: 2vh;
+       
+        width: 90%;
+        background-color:#f4f9ff;
+        margin: auto;
+        box-shadow: 0 9px 68px 0 rgb(62 57 107 / 20%);
+    text-align: center;
+    border: 2px solid #f4f9ff;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+
+    }
+    .inputs>div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #fff;
+    }
+
+    input,select{
+        padding: 8px 5px;
+        border: 1px solid rgb(36, 35, 35);
+        width: 96%;
+        border-radius: 10px;
+        position: relative;
+        left: 0%;
+        font-size: 14px;
+        text-align: center;
+    
+     }
+     label{
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        position: relative;
+     left: 0px;
+     font-weight: 500;
+    }
+
+    .usersettings >.user img{
+        width:40%;
+        border-radius: 50%;
+        /* margin: 10px; */
+        }
+        
+        .usersettings .user{
+            background-color: #142c8e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            color: #fff;
+            font-size: 20px;
+            width: 100%;
+        }
+       
+
+
+        .name{
+            font-size: 17px;
+            width: auto;
+        }
+
+        .about .large{
+            font-weight: 600;
+            font-size: 16px;
+           
+        }
+        
+        
+        .usersettings>.about p{
+         position: relative;
+         bottom: 12px;
+         font-size: 12px;
+         
+        }
+        button{
+            padding: 6px 12px;
+            display: block;
+            width:49%;
+            background: #142c8e;
+            border-radius: 40px;
+            /* margin: 20px 0px; */
+            text-decoration: none;
+            color:#fff;
+            text-align: center;
+            margin: auto;
+            border: 1px solid #142c8e;
+            position: relative;
+           bottom: 15px;
+         }
+    
+ }

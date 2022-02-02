@@ -1,0 +1,371 @@
+
+    
+    .safetag img{
+        width: 50%;
+        height: auto;
+    }
+    
+    .safetag>div{
+        width: 450px;
+        position: relative;
+        left: 50px;
+    }
+    .safetag{
+        background: #31092a;
+        background: linear-gradient(
+    90deg,#31092a,#0e0331);
+        color: #fff;
+        padding: 30px 0;
+       width: 100%;
+       display: flex;
+       justify-content: space-between;
+      position: relative;
+      /* top: 100px; */
+      /* bottom: 140px; */
+    }
+    .safetag h1{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 71px;
+        width: 700px;
+    }
+
+    .safetag p {
+color: #fff;
+    }
+
+    .safetag a{
+        padding: 13px;
+        display: block;
+        width: 110px;
+        background: rgb(235, 164, 0);
+        border-radius: 40px;
+        margin: 20px 0px;
+        text-decoration: none;
+        color:#fff;
+        text-align: center;
+        margin: auto;
+    }
+    .button{
+        display: flex;
+        justify-content: space-between;
+       
+    }
+    .safetag p{
+        /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+        font-size: 25px;
+        font-weight: 300;
+    }
+    
+    @media (max-width:400px) {
+        .safetag>div{
+            width: 100%;
+            position: relative;
+            margin: auto;
+            left: 0px;
+            
+        }
+        .safetag{
+            background: #31092a;
+            background: linear-gradient(
+        90deg,#31092a,#0e0331);
+            color: #fff;
+            padding:  0;
+           width: 100%;
+           display: flex;
+           justify-content: space-evenly;
+           height: auto;
+           flex-direction: column;
+           position: relative;
+           top: 70px;
+        }
+        .safetag h1{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+            font-size: 30px;
+            width: 100%;
+            padding: 5px;
+            word-break: break-word;
+        }
+        .safetag p{
+            font-size: 16px;
+            font-weight: 350;
+           padding: 5px;
+            position: relative;
+            top: 3px;
+            /* font-weight: 250; */
+        }
+    
+        .button{
+            display: flex;
+          position: relative;
+          top: 12px;
+        }
+    /* .coding */
+        .safetag a{
+            padding: 6px 12px;
+            display: block;
+            width: 70%;
+            background: rgb(235, 164, 0);
+            border-radius: 40px;
+            margin: 20px 0px;
+            text-decoration: none;
+            color:#fff;
+            text-align: center;
+            margin: auto;
+        }
+        .safetag .code{
+            display: none;
+        }
+        .safetag .coding{
+            background-color: #fff;
+            color: rgb(26, 24, 24);
+            width: 70%;
+        }
+
+        .safetag img{
+            position: relative;
+            width: 100%;
+            height: auto;
+            
+        }
+
+       .secImage{
+        margin: auto;
+        text-align: center;
+       }
+    
+    }
+    
+    
+    @media (min-width:400px) {
+        .safetag>div{
+            width: 100%;
+            position: relative;
+            margin: auto;
+            left: 0px;
+        }
+        .safetag{
+            background: #31092a;
+            background: linear-gradient(
+        90deg,#31092a,#0e0331);
+            color: #fff;
+            padding:  0;
+           width: 100%;
+           display: flex;
+           justify-content: space-evenly;
+           height: auto;
+           flex-direction: column;
+          position: relative;
+          top: 35px;
+        }
+        .safetag h1{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+            font-size: 36px;
+            width: 100%;
+            padding-left: 2px;
+            word-break: break-all;
+        }
+        .safetag p{
+            /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+            font-size: 16px;
+            font-weight: 400;
+            padding-left: 2px;
+        }
+    
+        /* .safetag a{
+            padding: 9px 12px;
+            display: block;
+            width: 45%;
+            background: rgb(235, 164, 0);
+            border-radius: 40px;
+            margin: 20px 0px;
+            text-decoration: none;
+            color:#fff;
+            text-align: center;
+            margin: auto;
+            position: relative;
+            top: 10px;
+        } */
+
+        .safetag a{
+            padding: 6px 12px;
+            display: block;
+            width: 48%;
+            background: rgb(235, 164, 0);
+            border-radius: 40px;
+            margin: 20px 0px;
+            text-decoration: none;
+            color:#fff;
+            text-align: center;
+            margin: auto;
+        }
+        .safetag a:hover{
+            color: #000;
+            background-color: #fff;
+        }
+        .safetag .code{
+            display: block;
+
+        }
+
+        .secImage{
+            text-align: center;
+        }
+        .safetag img{
+            position: relative;
+            width: 100%;
+            height: auto;
+            /* bottom: 52px; */
+        }
+    }
+    
+    
+    @media (min-width:800px) {
+        
+        .safetag>div{
+          
+                width: 500px;
+                position: relative;
+                left: unset;
+         
+        }
+    
+        .safetag{
+            background: #31092a;
+            background: linear-gradient(
+        90deg,#31092a,#0e0331);
+            color: #fff;
+            padding: 30px 0;
+           width: 100%;
+           display: flex;
+           justify-content: space-evenly;
+           height: 90vh;
+           flex-direction: row;
+           align-items: center;
+        }
+    
+        .safetag h1{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 40px;
+        padding-left: 20px;
+        }
+        .safetag p{
+            /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+            font-size: 18px;
+            /* font-weight: 350; */
+            padding-left: 2px;
+            font-weight: 300;
+            padding-left: 20px;
+
+        }
+    
+        /* .button{
+            position: relative;
+            top: 350px;
+            display: flex;
+            float: left;
+            justify-content:space-between;
+            align-items: center;
+           text-align: center;
+         margin: auto;
+         left:20%;
+         right: 20%;
+        } */
+    
+        .safetag a{
+            padding: 9px 16px;
+            display: block;
+            width: 220px;
+            background: rgb(235, 164, 0);
+            border-radius: 40px;
+            margin: 20px 0px;
+            text-decoration: none;
+            color:#fff;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .safetag a:hover{
+            color: #000;
+            background-color: #fff;
+        }
+        .safetag .code{
+            display: block;
+
+        }
+
+     
+      .safetag img{
+            position: relative;
+    width: 50%;
+            height: auto;
+            bottom: unset;
+        }
+    
+    }
+    
+    @media (min-width:1000px) {
+        .safetag h1{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bolder;
+        font-size: 51px;
+        padding-left: 1px;
+        }
+        .safetag p{
+            /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+            font-size: 23px;
+            font-weight: 300;
+            padding-left: 1px;
+        }
+        
+      .safetag>div{
+          
+        width: 600px;
+        position: relative;
+        /* margin: auto; */
+        left: unset;
+    
+    }
+    .safetag{
+        background: #31092a;
+        background: linear-gradient(
+    90deg,#31092a,#0e0331);
+        color: #fff;
+        padding: 30px 0;
+       width: 100%;
+       display: flex;
+       justify-content: space-between;
+       height: 90vh;
+       flex-direction: row;
+       align-items: center;
+    }
+    .button{
+        float: left;
+    }
+    .safetag a{
+        padding: 9px 16px;
+        display: block;
+        width: 230px;
+        background: rgb(235, 164, 0);
+        border-radius: 40px;
+        margin: 20px 0px;
+        text-decoration: none;
+        color:#fff;
+        text-align: center;
+        margin:20px;
+    }
+    }
+
+    .safetag .coding{
+        background-color: #fff;
+        color: rgb(26, 24, 24);
+    }
+
+
+    .safetag .coding:hover{
+        background-color: rgb(235, 164, 0);
+        color: #fff;
+    }

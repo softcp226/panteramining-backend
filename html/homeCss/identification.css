@@ -1,0 +1,32 @@
+/* main{
+    width: 900px;
+} */
+.fileDivContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fileDiv{
+    padding: 50px;
+    border: 1px solid gray;
+margin: 20px;
+    width:40%;
+   
+    cursor: pointer;
+   border-radius: 10px;
+}
+
+input[type=file]{
+    /* padding: 1px; */
+    border: 1px solid rgb(36, 35, 35);
+    /* width:100px; */
+    border-radius: 10px;
+    position: relative;
+    
+    font-size: 11px;
+    position: relative;
+   
+    text-align: center;
+    border-width: 0px;
+}
