@@ -1,21 +1,63 @@
 
 
-function setCookie(email,id, token) {
+
+
+  function setCookie(user, token) {
     // alert("called")
-    console.log(id)
+    console.log(user);
+    const d = new Date();
+    d.setTime(d.getTime() + 24 * 60 * 60 * 1000);
+    let expires = "expires=" + d.toUTCString();
+    // document.cookie=`email=${email} ; ${expires}`
+    document.cookie = `user=${user} ; ${expires}`;
+    document.cookie = `token=${token} ; ${expires}`;
+    // let navigate;
+    // const params = new URLSearchParams(window.location.search);
+    // for (const param of params) {
+    //   navigate = param[0];
+    // }
+    // if (navigate) return window.location.replace(navigate);
+   window.location.replace("/dashboard.html")
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function setCookie_01(user, token) {
+    // alert("called")
+    console.log(user)
       const d = new Date();
       d.setTime(d.getTime() + 24*60*60*1000);
       let expires = "expires="+ d.toUTCString();
-      document.cookie=`email=${email} ; ${expires}`
-      document.cookie=`identity=${id} ; ${expires}`
-      document.cookie = `token=${token} ; ${expires}`;
-      let navigate;
-      const params = new URLSearchParams(window.location.search)
-      for (const param of params) {
-          navigate=param[0]
-      }
-      if(navigate)return window.location.replace(navigate)
-    window.location.replace("/dashboard.html")
+      // document.cookie=`email=${email} ; ${expires}`
+      document.cookie=`user=${user} ; ${expires}`
+      document.cookie = `token_01=${token} ; ${expires}`;
+      // let navigate;
+      // const params = new URLSearchParams(window.location.search)
+      // for (const param of params) {
+      //     navigate=param[0]
+      // }
+      // if(navigate)return window.location.replace(navigate)
+    window.location.replace("/complete-registration.html")
     } 
   
   
@@ -26,10 +68,10 @@ function setCookie(email,id, token) {
    try{
   
    document.querySelector("#login").innerHTML="proccessing..."
-    const response= await fetch("https://wisbankinstitute.herokuapp.com/api/user/login",{
+    const response= await fetch("/api/user/login",{
   method:"POST",
   headers:{"content-type":"application/json"},
-  body:JSON.stringify({Email:email,password})
+  body:JSON.stringify({email,password})
       })
       const result=await response.json()
       console.log(result)
@@ -39,7 +81,8 @@ function setCookie(email,id, token) {
         return
       }
       document.querySelector("#login").innerHTML="success"
-       return setCookie(result.message.Email,result.message.id,result.token)
+        setCookie(result.message.user,result.token)
+       window.location.replace("/dashboard.html")
   
     }catch(err){
       document.querySelector(".errMessage").innerHTML=err.message
@@ -47,27 +90,27 @@ function setCookie(email,id, token) {
     }
   }
   
-  const registerUser=async(Email,phoneNumber,country,password)=>{
+  const registerUser=async(email,phone_number,country)=>{
     try{
   
-      document.querySelector("#register").innerHTML="proccessing..."
-       const response= await fetch("https://wisbankinstitute.herokuapp.com/api/user/register",{
-     method:"POST",
-     headers:{"content-type":"application/json"},
-     body:JSON.stringify({Email,phoneNumber,country,password})
-         })
+      document.querySelector("#next").innerHTML="proccessing..."
+       const response = await fetch("/api/newuser/register", {
+         method: "POST",
+         headers: { "content-type": "application/json" },
+         body: JSON.stringify({ email, phone_number, country }),
+       });
          const result=await response.json()
          console.log(result)
          if(result.error){
            document.querySelector(".errmessage2").innerHTML=result.errMessage
-           document.querySelector("#register").innerHTML="try again"
+           document.querySelector("#next").innerHTML="try again"
            return
          }
-         document.querySelector("#register").innerHTML="success"
-          return setCookie(result.message.Email,result.message.id,result.token)
+         document.querySelector("#next").innerHTML="success"
+          return setCookie_01(result.message.user, result.token);
        }catch(err){
          document.querySelector(".errmessage2").innerHTML=err.message
-         document.querySelector("#register").innerHTML="try again"
+         document.querySelector("#next").innerHTML="try again"
        }
   }
   //response gotten
@@ -112,24 +155,18 @@ function setCookie(email,id, token) {
   
   
   
-      document.querySelector("#register").onclick=()=>{
+      document.querySelector("#next").onclick=()=>{
         let errorColor="2px solid red"
         event.preventDefault()
        const email= document.querySelector("#registerEmail")
        const phoneNumber=document.querySelector("#registerNumber")
        const country=document.querySelector("select")
-       const registerPassword=document.querySelector("#registerPassword")
        if(!email.value)return email.style.border=errorColor
        if(!phoneNumber.value)return phoneNumber.style.border=errorColor;
        if(!country.value)return country.style.border=errorColor;
-       if(!registerPassword.value)return registerPassword.style.border=errorColor
-       if(registerPassword.value.length <=7){
-        registerPassword.style.border=errorColor
-        document.querySelector(".errmessage2").innerHTML="Password must be atleast 8 characters long"
-        return 
-       }
+      
        document.querySelector(".errmessage2").innerHTML=""
-       registerUser(email.value,phoneNumber.value,country.value,registerPassword.value)
+       registerUser(email.value,phoneNumber.value,country.value)
       }
   
       document.querySelectorAll("input").forEach(input=>{
