@@ -54,9 +54,26 @@ Router.post("/", upload.any("passport"), verifyToken_01, async (req, res) => {
     });
     await user_result.save();
     const token = genToken(user_result._id);
- res
-   .status(200)
-   .json({ error: false, message: { user: user_result._id }, token });
+
+    transporter.sendMail(
+      create_mail_options({
+        first_name: user_result.first_name,
+        last_name: user_result.last_name,
+        reciever: user.email,
+      }),
+      (err, info) => {
+        if (err) return console.log(err.message);
+        console.log(info);
+        // return res.status(400).json({
+        //   error: true,
+        //   errMessage: `Encounterd an error while trying to send an email to you: ${err.message}, try again`,
+        // });
+      }
+    );
+
+    res
+      .status(200)
+      .json({ error: false, message: { user: user_result._id }, token });
     console.log(user);
     console.log("success");
   } catch (error) {

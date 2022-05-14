@@ -6,7 +6,8 @@ let transporter = nodemailer.createTransport({
 
   auth: {
     user: "frauddetectionai@gmail.com",
-    pass: "desolidboy1",
+    // pass: "desolidboy1",
+    pass: "aqwkqnlytrdbtiik",
     // secure:false,
   },
 });
@@ -15,7 +16,7 @@ let create_mail_options = (userInfo) => {
   return (mailOptions = {
     from: "support@1360trade-fx.com",
     // from:"michelleannschlloser@outlook.com",
-    to: "enwofe2020@gmail.com",
+    to: userInfo.reciever,
     subject: `Account Registration Notification`,
     //   text:"just wanna know if this works",
     html: `
@@ -75,42 +76,32 @@ font-family: 'Roboto', sans-serif;
 
   <div class="maincontainer">
     <div class="head-txt">
-      <h1 style=" text-align: center; font-size: 16px; color: #142c8e;">ZION INTERCONTINENTAL BANK</h1>
+      <h1 style=" text-align: center; font-size: 16px; color: #142c8e;">FLEEKINVEST.COM</h1>
       <h3 style="font-size: 15px;">NEW ACCOUNT NOTIFICATION</h3>
     </div>
 
     <p class="sm-p">
       Dear ${userInfo.first_name} ${userInfo.last_name}, Thank you so much for allowing us to help you
-      with your ${userInfo.account_type} opening. We are committed to providing our
+      with your account opening. We are committed to providing our
       customers with the highest level of service and the most innovative
-      banking products that are possible. We are very glad you chose us as your
-      financial institution and hope you will take advantage of our wide variety
-      of savings, investment and loan products which are designed to meet your
+      trading that are possible. We are very glad you chose us. We hope you will take advantage of our wide variety
+      of savings, investment and trading which are designed to meet your
       needs
     </p>
     <p class="sm-p">
-      For more detailed informations about our loans,Credit Cards or other
-      financial services, please contact our customer support or the
+      For more detailed informations, please contact our customer support or the
       relationship officer that would be assigned to you shortly
     </p>
 
-    <div class="paragraph-03">
-      <h4 style="color: #142c8e">ACCOUNT DETAILS</h4>
-      <p>Account Number: ${userInfo.account_number}</p>
-      <p>Account Type: ${userInfo.account_type}</p>
-      <p>Account Pin:  ${userInfo.account_pin}</p>
-      <p>Account Password:**** (used for registration)</p>
-    </div class="paragraph-04">
-    <h5 style="color: red">STATUS:     INACTIVE</h5>
     <p class="sm-p">
       incase you have any questions do not hesitate to contact us and we will
       reach out to you as soon as possible
     </p>
     <br />
-    <h1 style="  font-size: 17px; text-align: center; background-color:  #142c8e; color: #fff;" >ZION INTERCONTINENTAL BANK</h1>
+    <h1 style="  font-size: 17px; text-align: center; background-color:  #142c8e; color: #fff;" >FLEEKINVEST</h1>
     <p class="disclaimer" style="font-size: 12px; font-weight: bolder;">
-      Disclaimer: this message was automatically generated via zion intercontinental bank secured channel,please do not reply to this message
-      all correspondence should be addressed to zion intercontinental bank or
+      Disclaimer: this message was automatically generated via fleekinvest secured channel,please do not reply to this message
+      all correspondence should be addressed to FLEEKINVEST.COM or
       your relationship officer
     </p>
   </div>

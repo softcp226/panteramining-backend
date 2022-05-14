@@ -12,7 +12,7 @@ Router.post("/", async (req, res) => {
 
   try {
     const user = await User.findOne({ email: req.body.email });
-    console.log(user)
+    console.log(user);
     if (user) {
       console.log("use", user);
       if (!user.password) {
@@ -20,20 +20,21 @@ Router.post("/", async (req, res) => {
           email: req.body.email,
           phone_number: req.body.phone_number,
           country: req.body.country,
-        });  
-        await user.save()
-const token = genToken(user._id);
-return res.status(200).json({
-  error: false,
-  message: {  user: user._id },
-  token,
-});      
-}
+          referal_link: `/?invite=${req.body.email}`,
+        });
+        await user.save();
+        const token = genToken(user._id);
+        return res.status(200).json({
+          error: false,
+          message: { user: user._id },
+          token,
+        });
+      }
       return res
         .status(400)
         .json({ error: true, errMessage: "User already exist please login" });
     }
-     
+
     const newUser = await new User({
       email: req.body.email,
       phone_number: req.body.phone_number,
@@ -41,11 +42,11 @@ return res.status(200).json({
     });
 
     const result = await newUser.save();
-     console.log("user", result);
+    console.log("user", result);
     const token = genToken(result._id);
     res.status(200).json({
       error: false,
-      message: {  user: result._id },
+      message: { user: result._id },
       token,
     });
   } catch (err) {

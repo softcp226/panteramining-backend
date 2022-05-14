@@ -23,7 +23,7 @@ Router.post("/", async (req, res) => {
       return res.status(403).json({
         error: true,
         errMessage:
-          "please register again, your previous registration was not complete",
+          "Register again with these email, your previous registration was not complete",
       });
     const passwordIsverified = await verifyPassword(
       req.body.password,

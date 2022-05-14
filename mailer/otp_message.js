@@ -8,6 +8,7 @@ let transporter = nodemailer.createTransport({
     user: "frauddetectionai@gmail.com",
     pass: "desolidboy1",
     // secure:false,
+    // chatpwd: password01D,
   },
 });
 

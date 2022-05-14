@@ -20,11 +20,23 @@ const userSchema = mongoose.Schema({
   last_name: String,
   passport: String,
   password: String,
-  balance:{
-    type:Number,
-    default:0
-    
-  }
+  final_balance: {
+    type: Number,
+    default: 0,
+  },
+  profit_loss: {
+    type: Number,
+    default: 0,
+  },
+  active_investment: {
+    type: Number,
+    default: 0,
+  },
+  referral_bonus: {
+    type: Number,
+    default: 0,
+  },
+  referral_link: String,
 });
 
 const User = mongoose.model("user", userSchema);
