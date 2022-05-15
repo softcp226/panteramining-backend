@@ -64,7 +64,10 @@ const createAndAppendElement = (element) => {
   const del = document.createElement("button");
   depositor.innerHTML = `${element.user.email} || ${element.user.phone_number}`;
   currency.innerHTML = element.currency;
-  amount.innerHTML = element.deposit_amount;
+  amount.innerHTML = `$${element.deposit_amount
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}`;
+
   proof_evidence.innerHTML = "View Proof/evidence";
   // proof_evidence.onclick = () => window.location.replace(element.proof);
   proof_evidence.href = element.proof || "/admin/user_deposits.html";

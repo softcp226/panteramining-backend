@@ -6,7 +6,7 @@ const Transaction = require("../model/transaction");
 const Admin = require("../model/admin");
 
 // const validate_admin = require("../validation/validate-admin-fetchuser");
-const validate_admin_approve_deposit = require("../validation/validate_admin_fetch_deposit");
+const validate_admin_approve_deposit = require("../validation/validate_admin_approve_deposit");
 const User = require("../model/user");
 const {
   create_mail_options,
@@ -14,6 +14,7 @@ const {
 } = require("../mailer/approve_deposit");
 
 Router.post("/", verifyToken, async (req, res) => {
+  console.log(req.body);
   const request_isvalid = validate_admin_approve_deposit(req.body);
   if (request_isvalid != true)
     return res.status(400).json({ error: true, errMessage: request_isvalid });
@@ -41,6 +42,10 @@ Router.post("/", verifyToken, async (req, res) => {
           "the deposit you requested to approve is not associated witjh a transaction",
       });
     const user = await User.findById(deposit_request.user);
+    // console.log(
+    //   user,
+    //   user.final_balance + parseInt(req.body.deposit_amount) + bonus
+    // );
     if (!user)
       return res.status(400).json({
         error: true,
@@ -50,7 +55,9 @@ Router.post("/", verifyToken, async (req, res) => {
     let bonus = parseInt(req.body.deposit_amount) / 2;
     user.set({
       final_balance:
-        user.final_balance + parseInt(req.body.deposit_amount) + bonus,
+        parseInt(user.final_balance) +
+        parseInt(req.body.deposit_amount) +
+        bonus,
     });
     transaction.set({ status: "success" });
 
@@ -78,6 +85,7 @@ Router.post("/", verifyToken, async (req, res) => {
       .status(200)
       .json({ error: false, message: "success, you approved a loan" });
   } catch (error) {
+    console.log(error);
     res.status(400).json({ error: true, errMessage: error.message });
   }
 });

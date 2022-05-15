@@ -53,7 +53,7 @@ Router.post("/single", verifyToken, async (req, res) => {
         error: true,
         errMessage: "the deposit request you requested for no longer exist",
       });
-    res.status(200).json({ error: true, message: deposit_request });
+    res.status(200).json({ error: false, message: deposit_request });
   } catch (error) {
     res.status(400).json({ error: true, errMessage: error.message });
   }

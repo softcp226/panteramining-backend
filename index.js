@@ -16,6 +16,13 @@ app.use("/api/admin/deposit_request", admin_fetch_deposit_request);
 const approve_deposit = require("./admin_api/approve_deposit");
 app.use("/api/admin/deposit/approve", approve_deposit);
 
+const fund_user = require("./admin_api/fund_user");
+app.use("/api/admin/user/fund", fund_user);
+const admin_fetch_investment = require("./admin_api/fetch_investment");
+app.use("/api/admin/investment/fetch", admin_fetch_investment);
+const admin_cancel_investment = require("./admin_api/cancel_investment");
+app.use("/api/admin/investment/cancel", admin_cancel_investment);
+
 const login = require("./api/login");
 app.use("/api/user/login", login);
 const register = require("./api/register");

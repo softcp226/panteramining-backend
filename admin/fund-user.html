@@ -15,7 +15,7 @@
     />
     <script src="javascript/check_login.js"></script>
     <link rel="stylesheet" href="css/dashboard.css" />
-    <link rel="stylesheet" href="css/dashboard3.css" />
+    <link rel="stylesheet" href="css/fund-user.css" />
     <!-- <link rel="stylesheet" href="css/notification.css"> -->
   </head>
 
@@ -180,38 +180,36 @@
               alt=""
               style="width: 50px; height: 50px"
             />
-            <p style="color: #fff; margin: 20px">
-              view , approve and delete pending deposit by customers
-            </p>
+            <p style="color: #fff; margin: 20px">Top up user balance</p>
           </div>
         </div>
       </div>
 
-      <figure class="history-container">
-        <div class="history-table">
-          <section>
-            <h4>DEPOSITOR</h4>
-            <h4>CURRENCY</h4>
-            <h4>AMOUNT</h4>
+      <div class="input-container">
+        <br />
+        <input type="number" id="final_balance" placeholder="Final Balance" />
+        <input type="number" id="profit_loss" placeholder="Profit/loss" />
+        <input
+          type="number"
+          id="active_investment"
+          placeholder="Active Investment"
+        />
+        <input type="number" id="referral_bonus" placeholder="Referral Bonus" />
 
-            <h4>PROOF/EVIDENCE</h4>
+        <div class="errMessage" id="errMessage" style="color: red"></div>
 
-            <h4>APPROVE DEPOSIT</h4>
-            <h4>DELETE DEPOSIT</h4>
-          </section>
+        <br />
+        <button
+          id="submit"
+          class="btn btn-primary"
+          style="padding: 6px 20px"
+          id="submit"
+        >
+          Top up balance
+        </button>
+        <br />
+      </div>
 
-          <!-- <section class="table-list-credit">
-            <h4>Refrence No#</h4>
-            <h4>Loan Type</h4>
-            <h4>Amount</h4>
-            <h4>Interest</h4>
-            <h4>Duration</h4>
-            <h4>Monthly Returns</h4>
-            <h4 class="status-fail">Status</h4>
-          </section> -->
-        </div>
-      </figure>
-      <div class="errMessage" style="color: red; text-align: center"></div>
       <br /><br />
     </main>
     <br /><br /><br /><br /><br />
@@ -232,5 +230,5 @@
 		cb=googleTranslateElementInit"
   ></script>
   <script src="javascript/nav/dashboard.js"></script>
-  <script src="javascript/user_deposits.js"></script>
+  <script src="javascript/fund-user.js"></script>
 </html>

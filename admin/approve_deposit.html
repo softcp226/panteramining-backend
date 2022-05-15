@@ -16,6 +16,7 @@
     <script src="javascript/check_login.js"></script>
     <link rel="stylesheet" href="css/dashboard.css" />
     <link rel="stylesheet" href="css/dashboard3.css" />
+    <link rel="stylesheet" href="css/card_application.css" />
     <!-- <link rel="stylesheet" href="css/notification.css"> -->
   </head>
 
@@ -146,6 +147,11 @@
         <img src="css/assets/cloud-data.png" alt="" class="carousel-db" />
         <a href="user_deposits.html" style="color: orange">User deposits</a>
       </div>
+
+      <div>
+        <img src="css/assets/verified.png" alt="" class="carousel-db" />
+        <a href="investment.html" style="color: green">Investments</a>
+      </div>
       <!-- 
      
 
@@ -175,37 +181,21 @@
               alt=""
               style="width: 50px; height: 50px"
             />
-            <p style="color: #fff; margin: 20px">
-              view , approve and delete pending deposit by customers
-            </p>
+            <p style="color: #fff; margin: 20px">Approve user deposit</p>
           </div>
         </div>
       </div>
 
-      <figure class="history-container">
-        <div class="history-table">
-          <section>
-            <h4>DEPOSITOR</h4>
-            <h4>CURRENCY</h4>
-            <h4>AMOUNT</h4>
-
-            <h4>PROOF/EVIDENCE</h4>
-
-            <h4>APPROVE DEPOSIT</h4>
-            <h4>DELETE DEPOSIT</h4>
-          </section>
-
-          <!-- <section class="table-list-credit">
-            <h4>Refrence No#</h4>
-            <h4>Loan Type</h4>
-            <h4>Amount</h4>
-            <h4>Interest</h4>
-            <h4>Duration</h4>
-            <h4>Monthly Returns</h4>
-            <h4 class="status-fail">Status</h4>
-          </section> -->
-        </div>
-      </figure>
+      <div class="input-container">
+        <input
+          type="number"
+          name=""
+          id="amount"
+          placeholder="amount"
+          class="l-input"
+        /><br />
+        <button class="btn btn-primary m-2" id="submit">Approve Deposit</button>
+      </div>
       <div class="errMessage" style="color: red; text-align: center"></div>
       <br /><br />
     </main>
@@ -227,4 +217,5 @@
 		cb=googleTranslateElementInit"
   ></script>
   <script src="javascript/nav/dashboard.js"></script>
+  <script src="javascript/approve_deposit.js"></script>
 </html>
