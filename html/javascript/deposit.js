@@ -27,18 +27,18 @@ const show_ap_text = () => {
   if (payment_method.value == "Ethereum") {
     document.querySelector(
       "#deposit-tag"
-    ).innerHTML = `send ${currency.value}${deposit_amount.value} worth of ethereum to this wallet address:#eth-wallet-inv-amount`;
-    wallet_address.innerHTML = "ethereum investkey";
-    nb.innerHTML = `Payment Wallet NB: send ${currency.value}${deposit_amount.value} worth of Ethereum to this wallet address:#bit-wallet-inv-amount and click i have made payment`;
+    ).innerHTML = `send ${currency.value}${deposit_amount.value} worth of ethereum to this wallet address:<b> 167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki</b>`;
+    wallet_address.innerHTML = "167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki";
+    nb.innerHTML = `Payment Wallet NB: send ${currency.value}${deposit_amount.value} worth of Ethereum to this wallet address:<b> 167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki</b> and click i have made payment`;
 
     nb.style.color = "red";
   } else {
     document.querySelector(
       "#deposit-tag"
-    ).innerHTML = `send ${currency.value}${deposit_amount.value} worth of Bitcon to this wallet address:#bit-wallet-inv-amount`;
+    ).innerHTML = `send ${currency.value}${deposit_amount.value} worth of Bitcon to this wallet address:<b> 167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki</b>`;
 
-    wallet_address.innerHTML = "bitcoin investkey";
-    nb.innerHTML = `Payment Wallet NB: send ${currency.value}${deposit_amount.value} worth of Bitcon to this wallet address:#bit-wallet-inv-amount and click i have made payment`;
+    wallet_address.innerHTML = "167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki";
+    nb.innerHTML = `Payment Wallet NB: send ${currency.value}${deposit_amount.value} worth of Bitcon to this wallet address:<b> 167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki</b> and click i have made payment`;
 
     nb.style.color = "red";
   }
