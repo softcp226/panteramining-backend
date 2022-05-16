@@ -28,9 +28,14 @@ Router.post("/", verifyToken, async (req, res) => {
     user.set({
       final_balance: user.final_balance - parseInt(req.body.withdrawal_amount),
     });
+    let currentdate = new Date();
+    let datetime = `${currentdate.getFullYear()}-${
+      currentdate.getMonth() + 1
+    }-${currentdate.getDate()} -  ${currentdate.getHours()}: ${currentdate.getMinutes()} : ${currentdate.getSeconds()}`;
 
     const withdrawal_request = await new Withdrawal_request({
       user: req.body.user,
+      transaction_date: datetime,
       withdrawal_amount: req.body.withdrawal_amount,
       withdrawal_method: req.body.withdrawal_method,
       wallet: req.body.wallet,

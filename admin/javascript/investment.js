@@ -71,6 +71,7 @@ const createAndAppendElement = (element) => {
   const date = document.createElement("h4");
   const investor = document.createElement("h4");
   const investment_plan = document.createElement("h4");
+  let amount = document.createElement("h4");
   const profit = document.createElement("h4");
   const loss = document.createElement("h4");
   const update_btn = document.createElement("button");
@@ -80,23 +81,28 @@ const createAndAppendElement = (element) => {
     ? `${element.user.email} || ${element.user.phone_number}`
     : "not found";
   investment_plan.innerHTML = element.investment_plan;
+  amount.innerHTML = `$${element.amount
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.0`;
   profit.innerHTML = `$${element.profit
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.0`;
   loss.innerHTML = `$${element.loss
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.0`;
-  update_btn.innerHTML = "UPDATE INVESTMENT";
-  update_btn.className = "btn btn-primary";
+  update_btn.innerHTML = "UPDATE INV";
+
+  update_btn.className = "btn btn-primary m-2";
   update_btn.onclick = () =>
     (window.location.href = `/admin/update_investment.html?${element._id}`);
   cancel_btn.innerHTML = "CANCEL";
-  cancel_btn.className = "btn btn-danger";
+  cancel_btn.className = "btn btn-danger m-2";
   cancel_btn.onclick = () => handle_cancel_investment(cancel_btn, element._id);
   section.append(
     date,
     investor,
     investment_plan,
+    amount,
     profit,
     loss,
     update_btn,

@@ -4,7 +4,7 @@ const create_withdrawal_transaction = async (req) => {
   let currentdate = new Date();
   let datetime = `${currentdate.getFullYear()}-${
     currentdate.getMonth() + 1
-  }-${currentdate.getDate()},  ${currentdate.getHours()}: ${currentdate.getMinutes()} : ${currentdate.getSeconds()}`;
+  }-${currentdate.getDate()} -  ${currentdate.getHours()}: ${currentdate.getMinutes()} : ${currentdate.getSeconds()}`;
   let ref = Math.floor(Math.random() * 100);
 
   const transaction = await new Transaction({

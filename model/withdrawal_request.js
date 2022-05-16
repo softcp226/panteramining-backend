@@ -8,6 +8,10 @@ const withdrawal_request_Schema = mongoose.Schema({
     ref: "user",
     required: true,
   },
+  transaction_date: {
+    type: String,
+    required: true,
+  },
 
   withdrawal_amount: {
     type: String,
