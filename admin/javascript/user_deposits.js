@@ -62,7 +62,9 @@ const createAndAppendElement = (element) => {
   const proof_evidence = document.createElement("a");
   const approve = document.createElement("button");
   const del = document.createElement("button");
-  depositor.innerHTML = `${element.user.email} || ${element.user.phone_number}`;
+  depositor.innerHTML = element.user
+    ? `${element.user.email} || ${element.user.phone_number}`
+    : "";
   currency.innerHTML = element.currency;
   amount.innerHTML = `$${element.deposit_amount
     .toString()
