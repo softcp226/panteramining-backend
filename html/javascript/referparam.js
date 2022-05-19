@@ -8,7 +8,7 @@ const getReferParam = () => {
 
 document.querySelectorAll("a").forEach((a) => {
   a.onclick = () => {
-    alert(a.href);
+    // alert(a.href);
     if (a.href.includes("register.html") || a.href.includes("login.html")) {
       event.preventDefault();
       let ref = getReferParam() || "";
