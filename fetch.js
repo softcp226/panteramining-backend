@@ -100,26 +100,26 @@
 //   currentdate.getMonth() + 1
 // }-${currentdate.getDate()} ${currentdate.getHours()}: ${currentdate.getMinutes()} : ${currentdate.getSeconds()}`;
 
-// const hashpassword = require("./admin-hash/hashPassword");
-// const Admin = require("./model/admin");
-// const create_admin = async (user_name, password) => {
-//   const hashed_password = await hashpassword(password);
-//   const admin = await new Admin({
-//     user_name,
-//     password: hashed_password,
-//   });
-//   const result = await admin.save();
-//   console.log(result);
-// };
-// create_admin("admin_01", "password");
-
-const User = require("./model/user");
-const fetch_user = async () => {
-  let user = await User.findById("627d8dfe2d38e80d22eaf2c8");
-  if (!user) console.log("no user with that id");
-  console.log(user);
-  // let result = await user.set({ final_balance: 10000 });
-  // await result.save();
-  // console.log(result);
+const hashpassword = require("./admin-hash/hashPassword");
+const Admin = require("./model/admin");
+const create_admin = async (user_name, password) => {
+  const hashed_password = await hashpassword(password);
+  const admin = await new Admin({
+    user_name,
+    password: hashed_password,
+  });
+  const result = await admin.save();
+  console.log(result);
 };
-fetch_user();
+create_admin("admin_01", "password");
+
+// const User = require("./model/user");
+// const fetch_user = async () => {
+//   let user = await User.findById("627d8dfe2d38e80d22eaf2c8");
+//   if (!user) console.log("no user with that id");
+//   console.log(user);
+//   // let result = await user.set({ final_balance: 10000 });
+//   // await result.save();
+//   // console.log(result);
+// };
+// fetch_user();
