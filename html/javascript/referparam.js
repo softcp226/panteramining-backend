@@ -9,7 +9,7 @@ const getReferParam = () => {
 document.querySelectorAll("a").forEach((a) => {
   a.onclick = () => {
     event.preventDefault();
-    let ref = getReferParam();
+    let ref = getReferParam() || "";
     window.location.href = `${a.href}?${ref}`;
 
     //
