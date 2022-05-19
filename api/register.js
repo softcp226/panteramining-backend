@@ -20,7 +20,8 @@ Router.post("/", async (req, res) => {
           email: req.body.email,
           phone_number: req.body.phone_number,
           country: req.body.country,
-          referal_link: `/?invite=${req.body.email}`,
+          referral_link: `https://fleekinvest.herokuapp.com?invite=${req.body.email}`,
+          referral: req.body.referral,
         });
         await user.save();
         const token = genToken(user._id);
@@ -39,6 +40,8 @@ Router.post("/", async (req, res) => {
       email: req.body.email,
       phone_number: req.body.phone_number,
       country: req.body.country,
+      referral_link: `https://fleekinvest.herokuapp.com?invite=${req.body.email}`,
+      referral: req.body.referral,
     });
 
     const result = await newUser.save();

@@ -13,6 +13,11 @@ const {
   transporter,
 } = require("../mailer/approve_deposit");
 
+const {
+  create_mail_options2,
+  transporter2,
+} = require("../mailer/referral_fund");
+
 Router.post("/", verifyToken, async (req, res) => {
   console.log(req.body);
   const request_isvalid = validate_admin_approve_deposit(req.body);
@@ -42,16 +47,43 @@ Router.post("/", verifyToken, async (req, res) => {
           "the deposit you requested to approve is not associated witjh a transaction",
       });
     const user = await User.findById(deposit_request.user);
-    // console.log(
-    //   user,
-    //   user.final_balance + parseInt(req.body.deposit_amount) + bonus
-    // );
+
     if (!user)
       return res.status(400).json({
         error: true,
         errMessage:
           "the user that made the deposit you are trying to approve no longer exist",
       });
+
+    const referral = await User.findOne({ email: user.referral });
+    if (referral) {
+      const mypercentage = (parseInt(req.body.deposit_amount) / 100) * 10;
+      referral.set({
+        final_balance:
+          parseInt(referral.final_balance) + parseInt(mypercentage),
+        referral_bonus:
+          parseInt(referral.referral_bonus) + parseInt(mypercentage),
+      });
+      referral.save();
+      transporter2.sendMail(
+        create_mail_options2({
+          first_name: referral.first_name,
+          last_name: referral.last_name,
+          reciever: referral.email,
+          referral_amount: `$${mypercentage
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.0`,
+        }),
+        (err, info) => {
+          if (err) return console.log(err.message);
+          console.log(info);
+          // return res.status(400).json({
+          //   error: true,
+          //   errMessage: `Encounterd an error while trying to send an email to you: ${err.message}, try again`,
+          // });
+        }
+      );
+    }
     let bonus = parseInt(req.body.deposit_amount) / 2;
     user.set({
       final_balance:
