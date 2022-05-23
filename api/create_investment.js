@@ -10,7 +10,7 @@ const {
 } = require("../mailer/investment_email");
 
 Router.post("/", verifyToken, async (req, res) => {
-  // console.log(req.body);
+  console.log(req.body);
   const request_isvalid = validate_create_investment(req.body);
   if (request_isvalid != true)
     return res.status(400).json({ error: true, errMessage: request_isvalid });
@@ -31,7 +31,7 @@ Router.post("/", verifyToken, async (req, res) => {
 
     user.set({
       active_investment:
-        user.active_investment + parseInt(req.body.investment_amount),
+        parseInt(user.active_investment) + parseInt(req.body.investment_amount),
       final_balance: user.final_balance - parseInt(req.body.investment_amount),
     });
     await user.save();

@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-const config = require("config");
+// const config = require("config");
 const mongoose = require("mongoose");
 const connectDB = (message) => {
   const db_link = process.env.db_Url;

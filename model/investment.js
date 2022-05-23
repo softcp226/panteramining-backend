@@ -25,10 +25,24 @@ const investment_schema = mongoose.Schema({
     type: String,
     required: true,
   },
+  return_time: {
+    type: String,
+    required: true,
+  },
+
   profit: {
     type: Number,
     default: 0,
   },
+  pending_profit: {
+    type: Number,
+    required: true,
+  },
+  investment_end_date: {
+    type: String,
+    required: true,
+  },
+
   loss: {
     type: Number,
     default: 0,

@@ -281,11 +281,15 @@
   <option value="Ultimate Plan">Ultimate Plan($11,000-unlimited)</option>
 </select>
 
-<!-- <label for="">Weekly Percentage:</label><br> -->
-  <div class="wallet-address" id="percentage">Weekly Percentage:</div>
+<select name="return_time" id="return_time">
+  <option value="">Investment return time</option>
+<option value="daily_return">daily retun</option>
+<option value="weekly_return"> Weekly return</option>
+</select>
+  <div class="wallet-address" id="percentage"> Percentage:</div>
 
   <!-- <label for="Weekly Earning">Weekly Earning:</label><br> -->
-<div class="wallet-address" id="earning">Weekly Earning:</div>
+<div class="wallet-address" id="earning"> Earning Amount:</div>
 <!-- <div class="wallet-address">Monthly Percentage:</div>
 <div class="wallet-address">Monthly Earn:</div> -->
 </div>
@@ -318,8 +322,11 @@
         application: "fleekinvest-dashboard"
       });
   </script>
+  <script src="javascript/investment/create-investment-copy.js"></script>
+    <script src="javascript/investment/investment-variable.js"></script>
+
   <script src="javascript/dashboard/dashboard.js"></script>
-  <script src="javascript/create-investment.js"></script>
+  <script src="javascript/investment/create-investment.js"></script>
     <script src="javascript/log_out.js"></script>
 
 </body>

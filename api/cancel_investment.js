@@ -26,11 +26,9 @@ Router.post("/", verifyToken, async (req, res) => {
       });
 
     user.set({
-      final_balance:
-        user.final_balance +
-        parseInt(investment.amount) +
-        parseInt(investment.profit) -
-        investment.loss,
+      final_balance: user.final_balance + parseInt(investment.amount),
+      // parseInt(investment.profit) -
+      // investment.loss,
       active_investment: user.active_investment - investment.amount,
     });
     await user.save();

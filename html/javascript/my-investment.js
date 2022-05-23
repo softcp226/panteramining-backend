@@ -58,9 +58,10 @@ const createAndAppendElement = (element) => {
   REFH4.innerHTML = element.refrence_number;
   AMTH4.innerHTML = `$${element.amount}`;
   IVP.innerHTML = element.investment_plan;
-  PT_LS.innerHTML = element.show_loss
-    ? `-$${element.loss}`
-    : `+$${element.profit}`;
+  PT_LS.innerHTML = `$${element.pending_profit
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.0`;
+
   PT_LS.style.color = element.show_loss ? "red" : "green";
 
   AN.innerHTML = "Cancel";
