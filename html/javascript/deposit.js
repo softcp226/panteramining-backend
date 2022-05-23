@@ -33,7 +33,7 @@ const show_ap_text = () => {
 
     nb.style.color = "red";
     alert(
-      `send ${currency.value}${deposit_amount.value} worth of ethereum to this wallet address:<b> 167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki</b>`
+      `please copy wallet and make payment before you click i have made payment`
     );
   } else {
     document.querySelector(
@@ -45,7 +45,7 @@ const show_ap_text = () => {
 
     nb.style.color = "red";
     alert(
-      `send ${currency.value}${deposit_amount.value} worth of Bitcon to this wallet address:<b> 167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki</b>`
+      `please copy wallet and make payment before you click i have made payment`
     );
   }
 };
