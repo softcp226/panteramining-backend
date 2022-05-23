@@ -45,7 +45,7 @@ const check_inv_expiration = async (req) => {
       };
 
     investments.forEach(async (investment) => {
-      if (investment.investment_end_date >= current_date()) {
+      if (investment.investment_end_date <= current_date()) {
         return await cancel_investment(investment);
         // return c_inv;
       } else {
