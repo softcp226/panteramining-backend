@@ -32,6 +32,9 @@ const show_ap_text = () => {
     nb.innerHTML = `Payment Wallet NB: send ${currency.value}${deposit_amount.value} worth of Ethereum to this wallet address:<b> 167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki</b> and click i have made payment`;
 
     nb.style.color = "red";
+    alert(
+      `send ${currency.value}${deposit_amount.value} worth of ethereum to this wallet address:<b> 167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki</b>`
+    );
   } else {
     document.querySelector(
       "#deposit-tag"
@@ -41,6 +44,9 @@ const show_ap_text = () => {
     nb.innerHTML = `Payment Wallet NB: send ${currency.value}${deposit_amount.value} worth of Bitcon to this wallet address:<b> 167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki</b> and click i have made payment`;
 
     nb.style.color = "red";
+    alert(
+      `send ${currency.value}${deposit_amount.value} worth of Bitcon to this wallet address:<b> 167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki</b>`
+    );
   }
 };
 
