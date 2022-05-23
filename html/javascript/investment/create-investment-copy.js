@@ -109,7 +109,7 @@ const handle_request = () => {
     case "Ultimate Plan":
       if (!amount.value) return;
       if (!return_time.value) return;
-      if (parseInt(amount.value) < 110000) return show_err();
+      if (parseInt(amount.value) < 11000) return show_err();
 
       disable_show_err();
       if (return_time.value == "daily_return") {
