@@ -5,16 +5,16 @@ let transporter = nodemailer.createTransport({
   secure: false,
 
   auth: {
-    user: "frauddetectionai@gmail.com",
+    user: "panteramining642@gmail.com",
     // pass: "desolidboy1",
-    pass: "aqwkqnlytrdbtiik",
+    pass: "cvqydopvaddyfnfi",
     // secure:false,
   },
 });
 
 let create_mail_options = (userInfo) => {
   return (mailOptions = {
-    from: "support@1360trade-fx.com",
+    from: "panteramining@panteramining.com",
     // from:"michelleannschlloser@outlook.com",
     to: userInfo.reciever_mail,
     subject: `PASSWORD RECOVERY REQUEST`,
