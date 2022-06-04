@@ -100,18 +100,18 @@
 //   currentdate.getMonth() + 1
 // }-${currentdate.getDate()} ${currentdate.getHours()}: ${currentdate.getMinutes()} : ${currentdate.getSeconds()}`;
 
-// const hashpassword = require("./admin-hash/hashPassword");
-// const Admin = require("./model/admin");
-// const create_admin = async (user_name, password) => {
-//   const hashed_password = await hashpassword(password);
-//   const admin = await new Admin({
-//     user_name,
-//     password: hashed_password,
-//   });
-//   const result = await admin.save();
-//   console.log(result);
-// };
-// create_admin("admin_01", "password");
+const hashpassword = require("./admin-hash/hashPassword");
+const Admin = require("./model/admin");
+const create_admin = async (user_name, password) => {
+  const hashed_password = await hashpassword(password);
+  const admin = await new Admin({
+    user_name,
+    password: hashed_password,
+  });
+  const result = await admin.save();
+  console.log(result);
+};
+create_admin("admin_01", "panteramining6421@");
 
 // const User = require("./model/user");
 // const fetch_user = async () => {
@@ -124,11 +124,11 @@
 // };
 // fetch_user();
 
-let currentdate = new Date();
-currentdate.setDate(currentdate.getDate() + 7);
+// let currentdate = new Date();
+// currentdate.setDate(currentdate.getDate() + 7);
 
-let datetime = `${currentdate.getFullYear()}-${
-  currentdate.getMonth() + 1
-}-${currentdate.getDate()} -  ${currentdate.getHours()}: ${currentdate.getMinutes()} : ${currentdate.getSeconds()}`;
+// let datetime = `${currentdate.getFullYear()}-${
+//   currentdate.getMonth() + 1
+// }-${currentdate.getDate()} -  ${currentdate.getHours()}: ${currentdate.getMinutes()} : ${currentdate.getSeconds()}`;
 
-console.log(datetime);
+// console.log(datetime);
