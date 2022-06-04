@@ -25,64 +25,31 @@ let create_mail_options = (userInfo) => {
     subject: `Deposit Confirmation Notification`,
     //   text:"just wanna know if this works",
     html: `
-  <main>
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap"
+  rel="stylesheet"
+/>
+<main    style="
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(https://edustair.com/assets/img/360_F_339709048_ZITR4wrVsOXCKdjHncdtabSNWpIhiaR7.jpg);
+    width: 100%;
+    background-size: cover;
+  "
+>
    
-  <style>
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Nunito+Sans:ital,wght@0,600;0,700;1,600&family=Nunito:ital,wght@0,200;0,300;1,200&family=Open+Sans&family=Poppins:wght@200&family=Roboto:wght@400;500&display=swap');
-
-.maincontainer{
-font-family: 'Nanum Gothic Coding', monospace;
-font-family: 'Nunito', sans-serif;
-font-family: 'Nunito Sans', sans-serif;
-font-family: 'Open Sans', sans-serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Roboto', sans-serif;
-      width: 100%;
-      top: 0;
-      left: 0;
-      right: 0;
-      font-weight: 100;
-      line-height: 2.5;
-    }
-    .cordial {
-      font-size: 16px;
-    
-    }
-    .head-txt {
-      text-align: center;
-      background-color: #142c8e;
-      font-size: 20px;
-      color: #fff;
-    }
-    .paragraph-01,
-    .paragraph-02 {
-      font-size: 15.5px;
-      padding: 1px;
-    }
-    .paragraph-03 {
-      font-weight: 400;
-      font-size: 15.5px;
-      padding: 1px;
-      color: green;
-    }
-    .paragraph-04{
-      font-size: 15.5px;
-      padding: 1px; 
-    }
-    .disclaimer{
-        font-size: 12px;
-        font-weight: 700;
-        padding: 0px;
-    }
-    h1,h2,h4,h5,h6{
-        font-size: 18px;
-    }
-  </style>
-
-  <div class="maincontainer">
+  <div class="maincontainer"     style="
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(https://edustair.com/assets/img/360_F_339709048_ZITR4wrVsOXCKdjHncdtabSNWpIhiaR7.jpg);
+    width: 100%;
+    background-size: cover;
+  ">
     <div class="head-txt">
-      <h1 style=" text-align: center; font-size: 16px; color: #142c8e;">FLEEKINVEST.COM</h1>
-      <h3 style="font-size: 15px;">DEPOSIT CONFIRMATION NOTIFICATION</h3>
+
+      <h3 style="text-align: center; font-size: 16px; color: #825ee4">DEPOSIT CONFIRMATION NOTIFICATION</h3>
     </div>
 
     <p class="sm-p">
@@ -91,7 +58,7 @@ font-family: 'Roboto', sans-serif;
     your fund has been deposited into your account with 50% first deposit bonus added
     </p>
     <p class="sm-p">
-    NB: your deposit has been converted to (united state dollars(USD)) which is the default currency used @fleekinvest.
+    NB: your deposit has been converted to (united state dollars(USD)) which is the default currency used @pantera mining.
       For more detailed informations, please contact our customer support or your
       relationship officer
     </p>
@@ -101,11 +68,11 @@ font-family: 'Roboto', sans-serif;
       reach out to you as soon as possible
     </p>
     <br />
-    <h1 style="  font-size: 17px; text-align: center; background-color:  #142c8e; color: #fff;" >FLEEKINVEST</h1>
-    <p class="disclaimer" style="font-size: 12px; font-weight: bolder;">
-      Disclaimer: this message was automatically generated via fleekinvest secured channel,please do not reply to this message
-      all correspondence should be addressed to FLEEKINVEST.COM or
-      your relationship officer
+    <h1 style="  font-size: 17px; text-align: center;  background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%); color: #fff;" >PANTERA MINING</h1>
+   <p class="disclaimer" style="font-size: 12px; font-weight: bolder">
+      Disclaimer: this message was automatically generated via pantera mining
+      secured channel,please do not reply to this message all correspondence
+      should be addressed to panteramining.com or your relationship officer
     </p>
   </div>
 </main>

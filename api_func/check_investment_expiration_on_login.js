@@ -35,9 +35,10 @@ const cancel_investment = async (investment) => {
   }
 };
 
-const check_inv_expiration = async (req) => {
+const check_inv_expiration = async (userID) => {
+  console.log("called with a user id of", userID);
   try {
-    const investments = await Investment.find({ user: req.body.user });
+    const investments = await Investment.find({ user: userID });
     if (investments.length < 1)
       return {
         error: true,
@@ -45,8 +46,8 @@ const check_inv_expiration = async (req) => {
       };
 
     investments.forEach(async (investment) => {
+      console.log(investment.investment_end_date);
       if (investment.investment_end_date <= current_date()) {
-        console.log(investment.investment_end_date);
         return await cancel_investment(investment);
         // return c_inv;
       } else {

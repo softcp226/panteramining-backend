@@ -10,15 +10,16 @@ Router.post("/", verifyToken, async (req, res) => {
   if (request_isvalid != true)
     res.status(400).json({ error: true, errMessage: request_isvalid });
   try {
-    const check_inv_exp_result = await check_inv_expiration(req);
-    console.log(await check_inv_exp_result);
-
     const user = await User.findById(req.body.user);
     if (!user)
       return res.status(404).json({
         error: true,
         errMessage: "invalid request, please login to view your investments",
       });
+
+    const check_inv_exp_result = await check_inv_expiration(req);
+    console.log(await check_inv_exp_result);
+
     const investments = await Investment.find({ user: req.body.user });
     if (investments.length < 1)
       return res.status(404).json({

@@ -18,50 +18,14 @@ let debit_create_mail_options = (userInfo) => {
     to: userInfo.reciever_mail,
     subject: `DEBIT ALERT`,
     //   text:"just wanna know if this works",
-    html: `<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transaction Reciept</title>
-</head>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-*{
-    
-    box-sizing: border-box;
-    font-family: "Poppins" , sans-serif;
-  }
-h3{
-   font-weight: 900;
-}
-.reciept{
-    color: #fff;  
-}
-
-.logo{
-    background-color: #142c8e; 
+    html: `
+    <main style="
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(https://edustair.com/assets/img/360_F_339709048_ZITR4wrVsOXCKdjHncdtabSNWpIhiaR7.jpg);
     width: 100%;
-   padding: 0px;
-    color: #fff;
-}
-.hr{
-    background-color: #142c8e;
-    width: 100%;
-    height: 1.2px;
-}
-p{
-    font-size: 17.5px;
-}
-</style>
-<body>
-   
-
-        </div>
-    <main style="background-color:#fff;  box-shadow: 0 3px 15px rgb(0 0 0 / 10%); width: 75%; margin: auto; padding: 10px;">
+    background-size: cover;
+  ">
 
        
         <div class="logo">

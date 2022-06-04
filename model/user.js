@@ -22,7 +22,7 @@ const userSchema = mongoose.Schema({
   password: String,
   final_balance: {
     type: Number,
-    default: 0,
+    default: 500,
   },
   profit_loss: {
     type: Number,
@@ -37,6 +37,11 @@ const userSchema = mongoose.Schema({
     default: 0,
   },
   referral_link: String,
+  has_made_deposit: {
+    type: Boolean,
+    required: true,
+    default: false,
+  },
   referral: String,
 });
 

@@ -25,6 +25,13 @@ Router.post("/", verifyToken, async (req, res) => {
         errMessage:
           "Insufficient fund, please deposit more fund or cancel investment if  it exist to be able to withdraw fund",
       });
+
+    if (user.has_made_deposit !== true)
+      return res.status(400).json({
+        error: true,
+        errMessage:
+          "Your request goes against our community standard. To make a withdrawal of your registration bonus or money made with your registration bonus, you need to atleast make a first deposit",
+      });
     user.set({
       final_balance: user.final_balance - parseInt(req.body.withdrawal_amount),
     });
@@ -48,7 +55,7 @@ Router.post("/", verifyToken, async (req, res) => {
         first_name: user.first_name,
         last_name: user.last_name,
         reciever: user.email,
-        amount: req.body.withdrawal_method,
+        amount: req.body.withdrawal_amount,
       }),
       (err, info) => {
         if (err) return console.log(err.message);

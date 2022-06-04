@@ -44,7 +44,7 @@ Router.post("/", verifyToken, async (req, res) => {
       return res.status(400).json({
         error: true,
         errMessage:
-          "the deposit you requested to approve is not associated witjh a transaction",
+          "the deposit you requested to approve is not associated with a transaction",
       });
     const user = await User.findById(deposit_request.user);
 
@@ -90,6 +90,7 @@ Router.post("/", verifyToken, async (req, res) => {
         parseInt(user.final_balance) +
         parseInt(req.body.deposit_amount) +
         bonus,
+      has_made_deposit: true,
     });
     transaction.set({ status: "success" });
 
