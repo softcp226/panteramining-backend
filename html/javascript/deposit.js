@@ -27,23 +27,23 @@ const show_ap_text = () => {
   if (payment_method.value == "Ethereum") {
     document.querySelector(
       "#deposit-tag"
-    ).innerHTML = `send ${currency.value}${deposit_amount.value} worth of ethereum to this wallet address:<b> 167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki</b>`;
-    wallet_address.innerHTML = "167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki";
-    nb.innerHTML = `Payment Wallet NB: send ${currency.value}${deposit_amount.value} worth of Ethereum to this wallet address:<b> 167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki</b> and click i have made payment`;
+    ).innerHTML = `send ${currency.value}${deposit_amount.value} worth of ethereum to this wallet address:<b> 0x903A4bEad66883Be827c33c46FdA20E84bc68dcc</b>`;
+    wallet_address.innerHTML = "0x903A4bEad66883Be827c33c46FdA20E84bc68dcc";
+    nb.innerHTML = `Payment Wallet NB: send ${currency.value}${deposit_amount.value} worth of Ethereum to this wallet address:<b> 0x903A4bEad66883Be827c33c46FdA20E84bc68dcc</b> and click i have made payment`;
 
-    nb.style.color = "red";
+    nb.style.color = "green";
     // alert(
     //   `please copy wallet and make payment before you click i have made payment`
     // );
   } else {
     document.querySelector(
       "#deposit-tag"
-    ).innerHTML = `send ${currency.value}${deposit_amount.value} worth of Bitcon to this wallet address:<b> 167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki</b>`;
+    ).innerHTML = `send ${currency.value}${deposit_amount.value} worth of Bitcon to this wallet address:<b> 1KaaZc4jsjTttKEPM7iYV5NiSSpY58QNVF</b>`;
 
-    wallet_address.innerHTML = "167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki";
-    nb.innerHTML = `Payment Wallet NB: send ${currency.value}${deposit_amount.value} worth of Bitcon to this wallet address:<b> 167rHyeKPuKdh8LvcCkCCHLj9aCMqY3uki</b> and click i have made payment`;
+    wallet_address.innerHTML = "1KaaZc4jsjTttKEPM7iYV5NiSSpY58QNVF";
+    nb.innerHTML = `Payment Wallet NB: send ${currency.value}${deposit_amount.value} worth of Bitcon to this wallet address:<b>1KaaZc4jsjTttKEPM7iYV5NiSSpY58QNVF</b> and click i have made payment`;
 
-    nb.style.color = "red";
+    nb.style.color = "green";
     // alert(
     //   `please copy wallet and make payment before you click i have made payment`
     // );
