@@ -45,9 +45,12 @@ const check_inv_expiration = async (userID) => {
         errMessage: "sorry,you have not made any investment",
       };
 
+    let up_date = new Date();
+    up_date.setDate(up_date.getDate());
+    let today = up_date.getTime();
+
     investments.forEach(async (investment) => {
-      console.log(investment.investment_end_date);
-      if (investment.investment_end_date <= current_date()) {
+      if (parseInt(investment.investment_end_date) <= parseInt(today)) {
         return await cancel_investment(investment);
         // return c_inv;
       } else {

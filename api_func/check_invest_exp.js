@@ -38,15 +38,20 @@ const cancel_investment = async (investment) => {
 const check_inv_expiration = async (req) => {
   try {
     const investments = await Investment.find({ user: req.body.user });
+
     if (investments.length < 1)
       return {
         error: true,
         errMessage: "sorry,you have not made any investment",
       };
+    let up_date = new Date();
+    up_date.setDate(up_date.getDate());
+    let today = up_date.getTime();
 
     investments.forEach(async (investment) => {
-      if (investment.investment_end_date <= current_date()) {
-        console.log(investment.investment_end_date);
+      if (parseInt(investment.investment_end_date) <= parseInt(today)) {
+        console.log(investment);
+
         return await cancel_investment(investment);
         // return c_inv;
       } else {

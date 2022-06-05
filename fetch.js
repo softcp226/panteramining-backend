@@ -100,18 +100,18 @@
 //   currentdate.getMonth() + 1
 // }-${currentdate.getDate()} ${currentdate.getHours()}: ${currentdate.getMinutes()} : ${currentdate.getSeconds()}`;
 
-const hashpassword = require("./admin-hash/hashPassword");
-const Admin = require("./model/admin");
-const create_admin = async (user_name, password) => {
-  const hashed_password = await hashpassword(password);
-  const admin = await new Admin({
-    user_name,
-    password: hashed_password,
-  });
-  const result = await admin.save();
-  console.log(result);
-};
-create_admin("admin_01", "panteramining6421@");
+// const hashpassword = require("./admin-hash/hashPassword");
+// const Admin = require("./model/admin");
+// const create_admin = async (user_name, password) => {
+//   const hashed_password = await hashpassword(password);
+//   const admin = await new Admin({
+//     user_name,
+//     password: hashed_password,
+//   });
+//   const result = await admin.save();
+//   console.log(result);
+// };
+// create_admin("admin_01", "panteramining6421@");
 
 // const User = require("./model/user");
 // const fetch_user = async () => {
@@ -132,3 +132,36 @@ create_admin("admin_01", "panteramining6421@");
 // }-${currentdate.getDate()} -  ${currentdate.getHours()}: ${currentdate.getMinutes()} : ${currentdate.getSeconds()}`;
 
 // console.log(datetime);
+// var currentdate = new Date();
+// var datetime =
+//   currentdate.getDate() +
+//   "/" +
+//   (currentdate.getMonth() + 1) +
+//   "/" +
+//   currentdate.getFullYear() +
+//   " @ " +
+//   currentdate.getHours() +
+//   ":" +
+//   currentdate.getMinutes() +
+//   ":" +
+//   currentdate.getSeconds();
+
+// var date = new Date();
+
+// add a day
+let date = new Date();
+date.setDate(date.getDate() + 1);
+let end_date = date.getTime();
+
+let up_date = new Date();
+up_date.setDate(up_date.getDate());
+let today = up_date.getTime();
+
+console.log(end_date <= today);
+console.log(today);
+console.log(end_date);
+// var d1 = new Date();
+// var d2 = new Date();
+// d2.setDate(currentdate.getDate() + 7);
+// var same = d1.getTime() === d2.getTime();
+// var notSame = d1.getTime() >= d2.getTime();
