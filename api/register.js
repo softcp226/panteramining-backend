@@ -14,13 +14,13 @@ Router.post("/", async (req, res) => {
     const user = await User.findOne({ email: req.body.email });
     console.log(user);
     if (user) {
-      console.log("use", user);
+      // console.log("use", user);
       if (!user.password) {
         user.set({
           email: req.body.email,
           phone_number: req.body.phone_number,
           country: req.body.country,
-          referral_link: `https://fleekinvest.herokuapp.com?${req.body.email}`,
+          referral_link: `https://www.panteramining.com?${req.body.email}`,
           referral: req.body.referral,
         });
         await user.save();

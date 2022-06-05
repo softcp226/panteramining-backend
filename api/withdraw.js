@@ -30,7 +30,7 @@ Router.post("/", verifyToken, async (req, res) => {
       return res.status(400).json({
         error: true,
         errMessage:
-          "Your request goes against our community standard. To make a withdrawal of your registration bonus or money made with your registration bonus, you need to atleast make a first deposit",
+          "To make a withdrawal of your money or registration bonus , you need to atleast make a first deposit",
       });
     user.set({
       final_balance: user.final_balance - parseInt(req.body.withdrawal_amount),

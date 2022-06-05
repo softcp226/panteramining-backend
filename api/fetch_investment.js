@@ -24,7 +24,7 @@ Router.post("/", verifyToken, async (req, res) => {
     if (investments.length < 1)
       return res.status(404).json({
         error: true,
-        errMessage: "sorry,you have not made any investment",
+        errMessage: "sorry,you dont have any active investment at the moment",
       });
 
     res.status(200).json({ error: false, message: investments });
