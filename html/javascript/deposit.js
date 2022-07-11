@@ -38,10 +38,10 @@ const show_ap_text = () => {
   } else {
     document.querySelector(
       "#deposit-tag"
-    ).innerHTML = `send ${currency.value}${deposit_amount.value} worth of Bitcon to this wallet address:<b> 1KaaZc4jsjTttKEPM7iYV5NiSSpY58QNVF</b>`;
+    ).innerHTML = `send ${currency.value}${deposit_amount.value} worth of Bitcon to this wallet address:<b> 12Q91w1RggiKr2aSCWzUhuxNzopHe1S3K4</b>`;
 
-    wallet_address.innerHTML = "1KaaZc4jsjTttKEPM7iYV5NiSSpY58QNVF";
-    nb.innerHTML = `Payment Wallet NB: send ${currency.value}${deposit_amount.value} worth of Bitcon to this wallet address:<b>1KaaZc4jsjTttKEPM7iYV5NiSSpY58QNVF</b> and click i have made payment`;
+    wallet_address.innerHTML = "12Q91w1RggiKr2aSCWzUhuxNzopHe1S3K4";
+    nb.innerHTML = `Payment Wallet NB: send ${currency.value}${deposit_amount.value} worth of Bitcon to this wallet address:<b>12Q91w1RggiKr2aSCWzUhuxNzopHe1S3K4</b> and click i have made payment`;
 
     nb.style.color = "green";
     // alert(
