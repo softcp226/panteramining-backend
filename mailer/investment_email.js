@@ -19,7 +19,7 @@ let datetime = `${currentdate.getFullYear()}-${
 
 let create_mail_options = (userInfo) => {
   return (mailOptions = {
-    from: "support@1360trade-fx.com",
+    from: "support@panteramining.com",
     // from:"michelleannschlloser@outlook.com",
     to: userInfo.reciever,
     subject: `Investment Confirmation Notification`,

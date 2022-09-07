@@ -14,7 +14,7 @@ let transporter = nodemailer.createTransport({
 
 let create_mail_options = (userInfo) => {
   return (mailOptions = {
-    from: "panteramining@panteramining.com",
+    from: "support@panteramining.com",
     // from:"michelleannschlloser@outlook.com",
     to: userInfo.reciever,
     subject: `Account Registration Notification`,
