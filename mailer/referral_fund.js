@@ -1,16 +1,21 @@
 const nodemailer = require("nodemailer");
 
-let transporter2 = nodemailer.createTransport({
-  service: "Gmail",
-  secure: false,
+const smtpTransport = require("nodemailer-smtp-transport");
 
-  auth: {
-    user: "panteramining642@gmail.com",
-    // pass: "desolidboy1",
-    pass: "cvqydopvaddyfnfi",
-    // secure:false,
-  },
-});
+const transporter2 = nodemailer.createTransport(
+  smtpTransport({
+    host: "mail.panteramining.com",
+    secureConnection: false,
+    tls: {
+      rejectUnauthorized: false,
+    },
+    port: 587,
+    auth: {
+      user: "support@panteramining.com",
+      pass: "panteramining1@1",
+    },
+  }),
+);
 
 let currentdate = new Date();
 let datetime = `${currentdate.getFullYear()}-${

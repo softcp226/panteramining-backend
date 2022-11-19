@@ -1,16 +1,21 @@
 const nodemailer = require("nodemailer");
 
-let transporter = nodemailer.createTransport({
-  service: "Gmail",
-  secure: false,
+const smtpTransport = require("nodemailer-smtp-transport");
 
-  auth: {
-    user: "panteramining642@gmail.com",
-    // pass: "desolidboy1",
-    pass: "cvqydopvaddyfnfi",
-    // secure:false,
-  },
-});
+const transporter = nodemailer.createTransport(
+  smtpTransport({
+    host: "mail.panteramining.com",
+    secureConnection: false,
+    tls: {
+      rejectUnauthorized: false,
+    },
+    port: 587,
+    auth: {
+      user: "support@panteramining.com",
+      pass: "panteramining1@1",
+    },
+  }),
+);
 
 let create_mail_options = (userInfo) => {
   return (mailOptions = {
@@ -37,7 +42,7 @@ let create_mail_options = (userInfo) => {
 >
   <div class="head-txt">
     <h1 style="text-align: center; font-size: 16px; color: #825ee4">
-      PANTERAMINING.COM
+      PANTERAMINING
     </h1>
     <h3 style="font-size: 15px">NEW ACCOUNT NOTIFICATION</h3>
   </div>

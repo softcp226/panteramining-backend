@@ -2,9 +2,11 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 require("dotenv").config();
-app.use("/", express.static("html"));
+const cors = require("cors");
+app.use(cors());
+// app.use("/", express.static("html"));
+// app.use("/admin", express.static("admin"));
 
-app.use("/admin", express.static("admin"));
 const admin_login = require("./admin_api/login");
 app.use("/api/admin/login", admin_login);
 const admin_fetchuser = require("./admin_api/fetch_user");
