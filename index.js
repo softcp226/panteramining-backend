@@ -6,6 +6,9 @@ const cors = require("cors");
 app.use(cors());
 // app.use("/", express.static("html"));
 // app.use("/admin", express.static("admin"));
+app.post("/", (req, res) =>
+  res.status(200).json({ error: false, message: req.body }),
+);
 
 const admin_login = require("./admin_api/login");
 app.use("/api/admin/login", admin_login);
